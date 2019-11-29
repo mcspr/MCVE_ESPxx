@@ -15,7 +15,8 @@ jobs:
         python-version: 3.7
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade platformio
+        pythom -m venv pioenv
+        ./pioenv/bin/pip install platformio
     - name: Run the test
       run: |
-        platformio run
+        ./pioenv/bin/platformio run
